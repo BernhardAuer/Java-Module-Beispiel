@@ -1,6 +1,6 @@
-package com.mci.servicemodule.internal;
+package com.mci.providermodule;
 
-import com.mci.servicemodule.external.TextService;
+import com.mci.servicemodule.TextService;
 
 public class LowercaseTextService implements TextService {
 

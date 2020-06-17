@@ -1,3 +1,5 @@
 rootProject.name = 'gradle_test2'
 include 'servicemodule'
 include 'consumermodule'
+include 'providermodule'
+

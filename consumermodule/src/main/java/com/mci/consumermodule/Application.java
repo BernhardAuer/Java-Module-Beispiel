@@ -1,12 +1,16 @@
 package com.mci.consumermodule;
 
 
-import com.mci.servicemodule.external.TextService;
-import com.mci.servicemodule.external.TextServiceFactory;
+import com.mci.servicemodule.TextService;
+
+import java.util.ServiceLoader;
 
 public class Application {
     public static void main(String args[]) {
-        TextService textService = TextServiceFactory.getTextService("lowercase");
-        System.out.println(textService.processText("Hello World!"));
+        ServiceLoader<TextService> services = ServiceLoader.load(TextService.class);
+        for (final TextService service: services) {
+            System.out.println("The service " + service.getClass().getSimpleName() +
+                    " says: " + service.processText("Hello World!"));
+        }
     }
 }
