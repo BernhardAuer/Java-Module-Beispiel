@@ -1,4 +1,6 @@
-package com.mci.servicemodule;
+package com.mci.servicemodule.internal;
+
+import com.mci.servicemodule.external.TextService;
 
 public class UppercaseTextService implements TextService {
 

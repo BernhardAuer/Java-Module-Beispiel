@@ -1,4 +1,4 @@
-package com.mci.servicemodule;
+package com.mci.servicemodule.external;
 
 public interface TextService {
     String processText(String text);
